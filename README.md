@@ -1,4 +1,4 @@
-# Custom Audit Logger
+# Custom SMS Handler
 
 This project includes a custom notification event handler `CustomSmsHandler` that extends the default implementation 
 `DefaultNotificationHandler` to override the `buildNotificationData` method and include additional information to the
