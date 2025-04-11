@@ -20,10 +20,10 @@ public class CustomSmsHandlerBundleComponent {
     protected void activate(final ComponentContext context) {
         final CustomSmsHandler customAuditLogger = new CustomSmsHandler();
 
-        final ServiceRegistration<?> customAuditLoggerServiceRegistrationResult = context.getBundleContext()
+        final ServiceRegistration<?> serviceRegistrationResult = context.getBundleContext()
                 .registerService(AbstractEventHandler.class.getName(), customAuditLogger, null);
 
-        if (customAuditLoggerServiceRegistrationResult == null) {
+        if (serviceRegistrationResult == null) {
             log.error("Error registering CustomSmsHandler as a AbstractEventHandler.");
         } else {
             log.info("CustomSmsHandler successfully registered as a AbstractEventHandler.");
